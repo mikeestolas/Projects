@@ -20,7 +20,7 @@ h1 {
     SELECT ALL SQUARES IN THE ARRAY
 -------------------------------------------*/
 .container .squares:nth-child(-n+4)   {
-    background-image: url ("../images/icons/m2.png");
+    background-image: url("./images/icons/m2.png");
     color: #fff;
     float: left;
     width: 100px;
@@ -36,7 +36,7 @@ h1 {
     SELECT ALL SQUARES PARAGRAPH IN THE ARRAY
 ----------------------------------------------*/
 .squares:nth-child(-n+4) p{
-    font-family: "Helvetics Neue", Helvetics, Arial, sans-serif;
+    font-family: "Helvetics Neue", Helvetica, Arial, sans-serif;
     font-size: 1.5em;
     font-weight: 900;
     text-align: center;
@@ -63,24 +63,49 @@ h1 {
    }
 
    /*--------------------------------------------
-        HOVER EFFECTS
+        HOVER,TRANSLATE, & TRANSITION EFFECTS
     ---------------------------------------------*/
-    .container .squares:nth-child(-N+4) :hover {
-        background-image: url ("../images/icons/m1.png");
+    .container .squares:nth-child(-N+4):hover {
+        background-image: url("./images/icons/m1.png");
+        transform: scale(.5);
+        animation-name: race;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(2.5, .2, .3, 2);
     }
 
-    .squares:nth-child(1) :hover {
+    .squares:nth-child(1):hover {
         background: #13b4ff;
     }
 
-    .squares:nth-child(2) :hover {
+    .squares:nth-child(2):hover {
         background: #d861af;
     }
 
-    .squares:nth-child(3) :hover {
+    .squares:nth-child(3):hover {
         background: #81205f;
     }
 
-    .squares:nth-child(4) :hover {
+    .squares:nth-child(4):hover {
         background: #77b800;
+    }
+
+    .button:hover {
+        background-color: #33fb14;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    /*-----------------------------------------------------
+        ANIMATION EFFETS
+    ------------------------------------------------------*/
+
+    @keyframes race{
+        0%, 100% {
+            transform: translateY(0px);
+            background-image: url("./images/icons/m1.png");       
+        }
+        50% {
+             transform: translateY(330px);   
+        }
     }
