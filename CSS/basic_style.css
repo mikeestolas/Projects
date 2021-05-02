@@ -29,7 +29,7 @@ h1 {
     border: 1px solid black;
     border-radius: 25%;
     cursor: pointer;
-    transition: transform .5s ease-in-out;
+    
 }
 
 /*-------------------------------------------
@@ -67,11 +67,7 @@ h1 {
     ---------------------------------------------*/
     .container .squares:nth-child(-N+4):hover {
         background-image: url("./images/icons/m1.png");
-        transform: scale(.5);
-        animation-name: race;
-        animation-duration: 2.5s;
-        animation-iteration-count: infinite;
-        animation-timing-function: cubic-bezier(2.5, .2, .3, 2);
+        
     }
 
     .squares:nth-child(1):hover {
@@ -94,18 +90,4 @@ h1 {
         background-color: #33fb14;
         color: #fff;
         cursor: pointer;
-    }
-
-    /*-----------------------------------------------------
-        ANIMATION EFFETS
-    ------------------------------------------------------*/
-
-    @keyframes race{
-        0%, 100% {
-            transform: translateY(0px);
-            background-image: url("./images/icons/m1.png");       
-        }
-        50% {
-             transform: translateY(330px);   
-        }
     }
