@@ -128,7 +128,7 @@ section {
     margin: 0% auto;
     content: " ";
     /* top:0;
-    left: o;*/
+    left: 0;*/
     /* position:absolute */ /* to the top edge of the screen */
     width: 100%;
     position: fixed;
@@ -348,7 +348,7 @@ section {
     }
 }
 
-@media all amd (max-width:381px) and (min-width:200px) {
+@media all and (max-width:381px) and (min-width:200px) {
     .head-main {
         width: 750px;
     }
